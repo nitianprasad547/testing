@@ -1,0 +1,86 @@
+.header{
+    background-color: rgb(18, 16, 16);
+    height: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px;
+    align-items: center;;
+    top:20px;
+    left:0;
+    right:0;
+    border-radius: 35px;
+    color:rgb(223, 100, 43);
+    z-index:1000;
+
+    
+}
+.left{
+    display: flex;
+    
+
+}
+.logo{
+    height:60px;
+    width:auto;
+    margin-top: 5px;
+    margin-left:20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.middle{
+    font-size: 24px;
+    font-family:swap;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    --colorA:rgb(234, 166, 39);
+    --colorB:rgb(132, 236, 132);
+
+    animation-name: changeColor;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+.right{
+    width:auto;
+    display: flex;
+    gap:10px;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+
+}
+.buttons{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    
+}
+
+.home-icon,
+.shop-icon,
+.setting-icon{
+    height: 25px;
+}
+
+@media only screen and (max-width:700px){
+    .middle{
+        display: none;
+    }
+}
+@keyframes changeColor{
+    from{
+        color: var(--colorA);
+    }
+    to {
+        color: var(--colorB);
+    }
+}
+
+    
+    
